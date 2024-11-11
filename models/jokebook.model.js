@@ -13,10 +13,13 @@ function categoryExists (categoryName) {
   const sql = 'SELECT id FROM categories WHERE name = ?'
   return db.get(sql, categoryName)
 }
-
+function getId(name){
+  const sql = `select id from categories where name =?;`;
+  return db.get(sql, name);
+}
 function createNewCategory (categoryName) {
   if (categoryExists(categoryName)) {
-    return null
+    return;
   }
   const sql = 'INSERT INTO categories (name) VALUES (?);'
   return db.run(sql, categoryName)
@@ -102,5 +105,6 @@ module.exports = {
   createNewCategory,
   createNewJoke,
   getRandom,
-  getExternalCategories
+  getExternalCategories,
+  getId
 }

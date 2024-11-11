@@ -13,7 +13,10 @@ router.get("/", jokebookController.getAllByOneAttribute);
 //http://localhost:3000/random
 router.get("/random", jokebookController.getRandom);
 
-// //http://localhost:3000/jokes/new
-// router.post("/new", jokesController.createNew);
+//http://localhost:3000/jokes/form
+router.get("/form", jokebookController.renderNewJokeForm);
+ 
+//http://localhost:3000/jokes/new
+router.post("/new", jokebookController.createNew);
 
 module.exports = router;
