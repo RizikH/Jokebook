@@ -1,0 +1,11 @@
+extends partials/layout.pug
+
+block layout-content
+  main.main  
+    h1.main-header #{page}
+    P No jokes found under Category: #{categoryName}
+    p Please check All Category tab for a list of all categories present internally.
+    p Additionally you may search for the following categories present in an external API:
+    section.main-box
+      each category in externalCategories
+        include partials/external-categories.pug

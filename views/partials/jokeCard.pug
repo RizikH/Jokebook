@@ -1,0 +1,7 @@
+article.card 
+  h2 Category: 
+    a(href=`/jokebook?attribute=name&value=${joke.name}`) #{joke.name}
+  p Setup: #{joke.setup}  
+  p Delivery: #{joke.delivery}
+  a(href=`/joke/${joke.id}`) 
+    button View 

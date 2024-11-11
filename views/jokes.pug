@@ -1,0 +1,8 @@
+extends partials/layout.pug
+
+block layout-content
+  main.main 
+    h1.main-header #{page}
+    section.main-box
+      each joke in jokeList
+        include partials\jokeCard.pug 
